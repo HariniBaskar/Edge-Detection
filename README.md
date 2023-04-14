@@ -18,7 +18,7 @@ Apply the respective filters -Sobel,Laplacian edge dectector and Canny edge dect
 Display the filtered image using plot and imshow.
 
 ## Program:
-## Import the packages and load the image, Convert to grayscale and remove noise
+### Import the packages and load the image, Convert to grayscale and remove noise
 ```
 import cv2
 import matplotlib.pyplot as plt
@@ -28,7 +28,7 @@ gray_image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 new_image = cv2.GaussianBlur(gray_image,(3,3),0)
 ```
 
-# SOBEL EDGE DETECTOR
+### SOBEL EDGE DETECTOR
 ```
 sobelx = cv2.Sobel(new_image,cv2.CV_64F,1,0,ksize = 5)
 plt.figure(figsize=(8,8))
@@ -53,7 +53,7 @@ plt.yticks([])
 plt.show()
 ```
 
-# LAPLACIAN EDGE DETECTOR
+### LAPLACIAN EDGE DETECTOR
 ```
 laplacian = cv2.Laplacian(new_image,cv2.CV_64F)
 plt.figure(figsize = (8,8))
@@ -63,7 +63,7 @@ plt.axis("off")
 plt.show()
 ```
 
-# CANNY EDGE DETECTOR
+### CANNY EDGE DETECTOR
 ```
 canny_edges = cv2.Canny(new_image, 120, 150)
 plt.figure(figsize = (8,8))
